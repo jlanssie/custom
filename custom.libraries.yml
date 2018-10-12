@@ -1,12 +1,8 @@
-global-styling-and-scripts:
-version: VERSION
-css:
 theme:
-https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css: {type: external, minified: true}
-css/style.css: {}
-dependencies:
-- core/jquery
-- core/jquery.ui.effects.core
-js:
-https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js: {type: external, minified: true}
-js/scripts.js: {}
+  js:
+    js/scripts.js: {}
+  css:
+    css/style.css: {}
+  dependencies: 
+    - core/jquery
+    - core/jquery.ui.effects.core
