@@ -1,0 +1,126 @@
+* {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #111;
+  color: #f1f1f1;
+}
+
+wrapper {
+  display: block;
+}
+
+/*----- COLOR BAR -----*/
+
+.colorBarWrapper {
+  width: 3000px;
+}
+
+.colorBar {
+    width: 100%;
+    height: 5px;
+    animation: rotate 1s infinite linear;
+    -webkit-animation: rotate 1s infinite linear;
+
+    background: rgb(48,255,144); /* Old browsers */
+    background: -moz-linear-gradient(left,  rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%, rgba(201,152,38,1) 50%, rgba(48,255,230,1) 75%, rgba(48,255,144,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(48,255,144,1)), color-stop(25%,rgba(237,45,237,1)), color-stop(50%,rgba(201,152,38,1)), color-stop(75%,rgba(48,255,230,1)), color-stop(100%,rgba(48,255,144,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30ff90', endColorstr='#30ff90',GradientType=1 ); /* IE6-9 */
+}
+
+@-webkit-keyframes rotate {
+  from {
+    background-position: -3000px;
+  }
+  to { 
+    background-position: 0px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    background-position: -3000px;
+  }
+  to { 
+    background-position: 0px;
+  }
+}
+
+/*----- LOGO -----*/
+
+.logoWrapper {
+  text-align:center;
+}
+
+.logoCenterWrapper {
+  padding: 1rem;
+}
+
+.logoImgWrapper, .logoTxtWrapper {
+  display: inline-block;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
+  
+  animation-name: logoTransformation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes logoTransformation {
+  0% {
+    background-color: rgba(48,255,144,1);
+  }
+
+  25% {
+    border-radius: 50%;
+    transform: rotate(45deg);
+    background-color: rgba(237,45,237,1);
+  }
+
+  50% {
+    border-radius: 0%;
+    transform: rotate(90deg);
+    background-color: rgba(201,152,38,1);
+  }
+
+  75% {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: rgba(48,255,230,1);
+  }
+
+  100% {
+    background-color: rgba(48,255,144,1);
+  } 
+}
+
+.site-title {
+  font-family: Futura, sans-serif;
+  font-size: 2em;
+}
+
+/*----- SEARCH BOX -----*/
+
+#block-customd-search h2 {
+  display: inline;
+  font-family: Helvetica, sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  display: none;
+  visibility: hidden;
+}
+
+#block-customd-search form, #block-customd-search div {
+  display: inline;
+}

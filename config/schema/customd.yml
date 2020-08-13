@@ -1,0 +1,5 @@
+# Schema for the configuration files of the CustomD theme.
+
+customd.settings:
+  type: theme_settings
+  label: 'CustomD settings'

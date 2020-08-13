@@ -1,8 +1,0 @@
-theme:
-  js:
-    js/scripts.js: {}
-  css:
-    css/style.css: {}
-  dependencies: 
-    - core/jquery
-    - core/jquery.ui.effects.core

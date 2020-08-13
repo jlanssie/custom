@@ -1,0 +1,22 @@
+name: customd
+type: theme
+description: 'A custom theme'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: false
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: 'Highlighted'
+  featured_top: 'Featured top'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  footer: 'Footer'
+libraries:
+  - customd/global-css
+  - customd/global-js
+stylesheets:
+  - css/style.css
