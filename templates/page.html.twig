@@ -45,56 +45,54 @@
  * @ingroup themeable
  */
 #}
+
 <div class="layout-container">
-  <wrapper class="colorBarWrapper"><div class="colorBar"></div></wrapper>
-  <header role="banner">
-    <wrapper class="logoWrapper">
-      <wrapper class="logoCenterWrapper">
-        <wrapper class="logoImgWrapper">
-          <div id="logo"></div>
-        </wrapper>
-        <wrapper class="logoTxtWrapper">
-          <div class="site-title">GrawR</div>
-        </wrapper>
-      </wrapper>
-    </wrapper>
-    <wrapper class="headerWrapper"> {{ page.header }} </wrapper>
-  </header>
+    <wrapper class="colorBarWrapper"><div class="colorBar"></div></wrapper>
+    <header role="banner">
+        {{ page.header }}
+    </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+    <div class="navbar">
+        <div class="primary-menu">
+            {{ page.primary_menu }}
+        </div>
+        <div class="secondary-menu">
+            {{ page.secondary_menu }}
+        </div>
+    </div>
 
-  {{ page.breadcrumb }}
+    <div class="breadcrumbs">
+        {{ page.breadcrumb }}
+    </div>
 
   {{ page.highlighted }}
 
   {{ page.help }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <main role="main">
+        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+        <div class="layout-content">
+            {{ page.content }}
+        </div>{# /.layout-content #}
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+        {% if page.sidebar_first %}
+            <aside class="layout-sidebar-first" role="complementary">
+              {{ page.sidebar_first }}
+            </aside>
+        {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
+        {% if page.sidebar_second %}
+            <aside class="layout-sidebar-second" role="complementary">
+              {{ page.sidebar_second }}
+            </aside>
+        {% endif %}
+    </main>
 
   {% if page.footer %}
     <footer role="contentinfo">
       {{ page.footer }}
     </footer>
-  {% endif %}
+{% endif %}
 
 </div>{# /.layout-container #}

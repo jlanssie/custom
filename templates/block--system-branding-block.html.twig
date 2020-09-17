@@ -14,15 +14,28 @@
  *
  * @ingroup themeable
  */
-#}
+ #}
+ 
 {% block content %}
-  {% if site_logo %}
-    <a href="{{ path('<front>') }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-    </a>
-  {% endif %}
-  {% if site_name %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-  {% endif %}
-  {{ site_slogan }}
+	<wrapper class="logoWrapper">
+		<wrapper class="logoCenterWrapper">
+			<wrapper class="logoImgWrapper">
+				<div id="logo"></div>
+			</wrapper>
+
+			{% if site_name %}
+				<wrapper class="logoTxtWrapper">
+					<div class="site-title"><a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a></div>
+				</wrapper>
+			{% endif %}
+
+		</wrapper>
+
+		{% if site_slogan %}
+			<wrapper>
+				<div class="site-slogan">{{ site_slogan }}</div>
+			</wrapper>
+		{% endif %}
+
+	</wrapper>
 {% endblock %}

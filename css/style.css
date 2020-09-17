@@ -5,19 +5,20 @@
 }
 
 body {
-  overflow-x: hidden;
-  background-color: #111;
-  color: #f1f1f1;
+    overflow-x: hidden;
+    background-color: #111;
+    font-family: Futura, sans-serif;
+    color: #f1f1f1;
 }
 
 wrapper {
-  display: block;
+    display: block;
 }
 
 /*----- COLOR BAR -----*/
 
 .colorBarWrapper {
-  width: 3000px;
+    width: 3000px;
 }
 
 .colorBar {
@@ -27,54 +28,60 @@ wrapper {
     -webkit-animation: rotate 1s infinite linear;
 
     background: rgb(48,255,144); /* Old browsers */
-    background: -moz-linear-gradient(left,  rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%, rgba(201,152,38,1) 50%, rgba(48,255,230,1) 75%, rgba(48,255,144,1) 100%); /* FF3.6+ */
+    background: -moz-linear-gradient(left, rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%, rgba(201,152,38,1) 50%, rgba(48,255,230,1) 75%, rgba(48,255,144,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(48,255,144,1)), color-stop(25%,rgba(237,45,237,1)), color-stop(50%,rgba(201,152,38,1)), color-stop(75%,rgba(48,255,230,1)), color-stop(100%,rgba(48,255,144,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -webkit-linear-gradient(left, rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* IE10+ */
-    background: linear-gradient(to right,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* W3C */
+    background: -ms-linear-gradient(left, rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30ff90', endColorstr='#30ff90',GradientType=1 ); /* IE6-9 */
 }
 
 @-webkit-keyframes rotate {
-  from {
+    from {
     background-position: -3000px;
   }
-  to { 
+    to { 
     background-position: 0px;
   }
 }
 
 @keyframes rotate {
-  from {
+    from {
     background-position: -3000px;
   }
-  to { 
+    to { 
     background-position: 0px;
   }
+}
+
+/*----- HEADER -----*/
+
+header {
+    padding: 1rem 0;
 }
 
 /*----- LOGO -----*/
 
 .logoWrapper {
-  text-align:center;
+    text-align:center;
 }
 
 .logoCenterWrapper {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 .logoImgWrapper, .logoTxtWrapper {
-  display: inline-block;
+    display: inline-block;
 }
 
 #logo {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
   
-  animation-name: logoTransformation;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+    animation-name: logoTransformation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes logoTransformation {
@@ -105,22 +112,65 @@ wrapper {
   } 
 }
 
-.site-title {
-  font-family: Futura, sans-serif;
-  font-size: 2em;
+.site-title a , .site-title a:link , .site-title a:active , .site-title a:visited , .site-title a:hover {
+    padding-left: .5rem;
+    font-size: 2em;
+    color: inherit;
+    text-decoration: none;
 }
 
-/*----- SEARCH BOX -----*/
-
-#block-customd-search h2 {
-  display: inline;
-  font-family: Helvetica, sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
-  display: none;
-  visibility: hidden;
+.site-slogan {
 }
 
-#block-customd-search form, #block-customd-search div {
-  display: inline;
+/*----- NAVBAR -----*/
+
+.navbar {
+    background-color: #fff;
+}
+
+.primary-menu, .secondary-menu {
+    display: inline-block;
+}
+
+.primary-menu div nav {
+    display: inline-block;
+}
+
+.primary-menu div nav ul li {
+    display: inline-block;
+    padding: .5rem;
+    letter-spacing: 1px;
+    color:#111;
+    background-color: #fff;
+}
+
+.primary-menu div nav ul li:hover {
+    color:#000;
+    background-color: rgba(237,45,237,1);
+}
+
+.primary-menu div nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:inherit;
+}
+
+/*----- Search Block Form -----*/
+
+.search-block-form {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .search-block-form {
+        display: inline-block;
+    }
+}
+
+.search-block-form h2 {
+    display: none;
+}
+
+.search-block-form form div .form-search {
+    border: 1px solid #000;
 }
