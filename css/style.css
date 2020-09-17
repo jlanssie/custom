@@ -132,11 +132,11 @@ header {
     display: inline-block;
 }
 
-.primary-menu div nav {
+.primary-menu nav {
     display: inline-block;
 }
 
-.primary-menu div nav ul li {
+.navbar li {
     display: inline-block;
     padding: .5rem;
     letter-spacing: 1px;
@@ -144,15 +144,35 @@ header {
     background-color: #fff;
 }
 
-.primary-menu div nav ul li:hover {
+.navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:inherit;
+}
+
+.navbar li.color-1:hover {
+    color:#000;
+    background-color: rgba(48,255,144,1);
+}
+
+.navbar li.color-2:hover {
     color:#000;
     background-color: rgba(237,45,237,1);
 }
 
-.primary-menu div nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color:inherit;
+.navbar li.color-3:hover {
+    color:#000;
+    background-color: rgba(201,152,38,1);
+}
+
+.navbar li.color-4:hover {
+    color:#000;
+    background-color: rgba(48,255,230,1);
+}
+
+.secondary-menu {
+    position: absolute;
+    right: 0;
 }
 
 /*----- Search Block Form -----*/
@@ -173,4 +193,8 @@ header {
 
 .search-block-form form div .form-search {
     border: 1px solid #000;
+}
+
+form input:hover {
+    cursor: pointer;
 }

@@ -38,13 +38,16 @@
     {% endif %}
     {% set count = 1 %}
     {% for item in items %}
-      <li{{ item.attributes }} class="menu-item-{{ count }}">
+      <li{{ item.attributes }} class="menu-item color-{{ count }}">
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
       </li>
       {% set count = count + 1 %}
+      {% if count == 5 %}
+        {% set count = 1 %}
+      {% endif %}
     {% endfor %}
     </ul>
   {% endif %}
