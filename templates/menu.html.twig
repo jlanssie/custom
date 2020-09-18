@@ -39,7 +39,14 @@
     {% set count = 1 %}
     {% for item in items %}
       <li{{ item.attributes }} class="menu-item color-{{ count }}">
-        {{ link(item.title, item.url) }}
+        {% if item.title == "Home" %}
+          {{ link(item.title, item.url, { 'id':'menu-home'}) }}
+        {% elseif item.title == "Log in" %}
+          {{ link(item.title, item.url, { 'id':'menu-login'}) }}
+        {% else %}
+          {{ link(item.title, item.url) }}
+        {% endif %}
+
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
