@@ -53,11 +53,12 @@
     </header>
 
     <div class="navbar">
-        <div class="primary-menu">
+        <div id="primary-menu" class="hidden">
+            <a href="javascript:void(0);" id="menuToggle-btn" onclick="menuToggle()">☰</a>
             {{ page.primary_menu }}
         </div>
-        <div class="secondary-menu">
-            {{ page.secondary_menu }}
+        <div id="login-btn">
+            <a href="/customd/user/login" id="menu-login" data-drupal-link-system-path="user/login"><img src="/customd/themes/customd/assets/loginIcon.svg"></a>
         </div>
     </div>
 
@@ -91,7 +92,12 @@
 
   {% if page.footer %}
     <footer role="contentinfo">
-      {{ page.footer }}
+        {#
+        <div id="secondary-menu">
+            {{ page.secondary_menu }}
+        </div>
+        #}
+        {{ page.footer }}
     </footer>
 {% endif %}
 

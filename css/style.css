@@ -15,6 +15,9 @@ wrapper {
     display: block;
 }
 
+/*----- GENERIC CLASSES -----*/
+
+
 /*----- COLOR BAR -----*/
 
 .colorBarWrapper {
@@ -27,13 +30,13 @@ wrapper {
     animation: rotate 1s infinite linear;
     -webkit-animation: rotate 1s infinite linear;
 
-    background: rgb(48,255,144); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(48,255,144,1) 0%, rgba(237,45,237,1) 25%, rgba(201,152,38,1) 50%, rgba(48,255,230,1) 75%, rgba(48,255,144,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(48,255,144,1)), color-stop(25%,rgba(237,45,237,1)), color-stop(50%,rgba(201,152,38,1)), color-stop(75%,rgba(48,255,230,1)), color-stop(100%,rgba(48,255,144,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* IE10+ */
-    background: linear-gradient(to right, rgba(48,255,144,1) 0%,rgba(237,45,237,1) 25%,rgba(201,152,38,1) 50%,rgba(48,255,230,1) 75%,rgba(48,255,144,1) 100%); /* W3C */
+    background:  #30ff90; /* Old browsers */
+    background: -moz-linear-gradient(left, #30ff90 0%, #ed2ded 25%, #ffff00 50%, #30ffe6 75%, #30ff90 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#30ff90), color-stop(25%,#ed2ded), color-stop(50%,#ffff00), color-stop(75%,#30ffe6), color-stop(100%,#30ff90)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #30ff90 0%,#ed2ded 25%,#ffff00 50%,#30ffe6 75%,#30ff90 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #30ff90 0%,#ed2ded 25%,#ffff00 50%,#30ffe6 75%,#30ff90 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #30ff90 0%,#ed2ded 25%,#ffff00 50%,#30ffe6 75%,#30ff90 100%); /* IE10+ */
+    background: linear-gradient(to right, #30ff90 0%,#ed2ded 25%,#ffff00 50%,#30ffe6 75%,#30ff90 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30ff90', endColorstr='#30ff90',GradientType=1 ); /* IE6-9 */
 }
 
@@ -86,29 +89,29 @@ header {
 
 @keyframes logoTransformation {
   0% {
-    background-color: rgba(48,255,144,1);
+    background-color: #30ff90;
   }
 
   25% {
     border-radius: 50%;
     transform: rotate(45deg);
-    background-color: rgba(237,45,237,1);
+    background-color: #ed2ded;
   }
 
   50% {
     border-radius: 0%;
     transform: rotate(90deg);
-    background-color: rgba(201,152,38,1);
+    background-color: #ffff00;
   }
 
   75% {
     transform: rotate(180deg);
     border-radius: 50%;
-    background-color: rgba(48,255,230,1);
+    background-color: #30ffe6;
   }
 
   100% {
-    background-color: rgba(48,255,144,1);
+    background-color: #30ff90;
   } 
 }
 
@@ -125,23 +128,67 @@ header {
 /*----- NAVBAR -----*/
 
 .navbar {
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background: repeating-linear-gradient(
+        -45deg,
+        #30ffe6,
+        #30ffe6 10px,
+        #ffff00 10px,
+        #ffff00 20px
+    );
+    height: 3rem;
 }
 
-.primary-menu, .secondary-menu {
+#primary-menu, #login-btn {
+    display: inline-block;
+    position: absolute;
+}
+
+#primary-menu nav {
     display: inline-block;
 }
 
-.primary-menu nav {
+#menuToggle-btn {
+    display: block;
+    padding: 1rem;
+    height: 1rem;
+    text-decoration: none;
+    color: #000;
+}
+
+#menuToggle-btn:visited {
+    color: #000;
+}
+
+.hidden #menuToggle-btn:hover {
+    background-color: #ed2ded;
+}
+
+.visible #menuToggle-btn:hover {
+    background-color: inherit;
+}
+
+#primary-menu.hidden div {
+    display: none;
+    visibility: hidden;
+}
+
+#primary-menu.visible div {
     display: inline-block;
+    visibility: visible;
+    float: right;
+    clear: right;
 }
 
 .navbar li {
-    display: inline-block;
-    padding: .5rem;
+    display: block;
+    visibility: inherit;
+    height: 1rem;
+    padding: 1rem;
     letter-spacing: 1px;
-    color:#111;
-    background-color: #fff;
+    color:#000;
+    background-color: #30ffe6;
+    list-style-type: none;
 }
 
 .navbar li a {
@@ -150,37 +197,37 @@ header {
     color:inherit;
 }
 
-.navbar li.color-1:hover {
-    color:#000;
-    background-color: rgba(48,255,144,1);
+.navbar .color-1:hover {
+    background-color: #ffff00;
 }
 
-.navbar li.color-2:hover {
-    color:#000;
-    background-color: rgba(237,45,237,1);
+.navbar .color-2:hover {
+    background-color: #ed2ded;
 }
 
-.navbar li.color-3:hover {
-    color:#000;
-    background-color: rgba(201,152,38,1);
+#menu-home {
+    
 }
 
-.navbar li.color-4:hover {
-    color:#000;
-    background-color: rgba(48,255,230,1);
-}
-
-.secondary-menu {
-    position: absolute;
+#login-btn {
     right: 0;
+    width: 1rem!important;
+    height: 1rem!important;
+    padding: 1rem;
+}
+
+#login-btn:hover {
+    background-color: #ed2ded;
 }
 
 /*----- Search Block Form -----*/
 
 .search-block-form {
-    display: none;
+    display: none!important;
+    visibility: hidden!important;
 }
 
+/*
 @media only screen and (min-width: 768px) {
     .search-block-form {
         display: inline-block;
@@ -198,3 +245,4 @@ header {
 form input:hover {
     cursor: pointer;
 }
+*/

@@ -40,9 +40,9 @@
     {% for item in items %}
       <li{{ item.attributes }} class="menu-item color-{{ count }}">
         {% if item.title == "Home" %}
-          {{ link(item.title, item.url, { 'id':'menu-home'}) }}
+          {{ link('HOME', item.url, { 'id':'menu-home'}) }}
         {% elseif item.title == "Log in" %}
-          {{ link(item.title, item.url, { 'id':'menu-login'}) }}
+          {{ link('👤', item.url, { 'id':'menu-login'}) }}
         {% else %}
           {{ link(item.title, item.url) }}
         {% endif %}
@@ -52,7 +52,7 @@
         {% endif %}
       </li>
       {% set count = count + 1 %}
-      {% if count == 5 %}
+      {% if count == 3 %}
         {% set count = 1 %}
       {% endif %}
     {% endfor %}
