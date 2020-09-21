@@ -47,10 +47,11 @@
 #}
 
 <div class="layout-container">
-    <wrapper class="colorBarWrapper"><div class="colorBar"></div></wrapper>
+    <wrapper class="colorBarWrapper"><div class="colorBar1"></div></wrapper>
     <header role="banner">
         {{ page.header }}
     </header>
+    <wrapper class="colorBarWrapper"><div class="colorBar2"></div></wrapper>
 
     <div class="navbar">
         <div id="primary-menu" class="hidden">
@@ -79,26 +80,26 @@
 
         {% if page.sidebar_first %}
             <aside class="layout-sidebar-first" role="complementary">
-              {{ page.sidebar_first }}
+                {{ page.sidebar_first }}
             </aside>
         {% endif %}
 
         {% if page.sidebar_second %}
             <aside class="layout-sidebar-second" role="complementary">
-              {{ page.sidebar_second }}
+                {{ page.sidebar_second }}
             </aside>
         {% endif %}
     </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-        {#
-        <div id="secondary-menu">
-            {{ page.secondary_menu }}
-        </div>
-        #}
-        {{ page.footer }}
-    </footer>
-{% endif %}
+    {% if page.footer %}
+        <footer role="contentinfo">
+            {#
+            <div id="secondary-menu">
+                {{ page.secondary_menu }}
+            </div>
+            #}
+            {{ page.footer }}
+        </footer>
+    {% endif %}
 
 </div>{# /.layout-container #}

@@ -29,13 +29,12 @@
 				</wrapper>
 			{% endif %}
 
+			{% if site_slogan %}
+				<wrapper>
+					<div class="site-slogan">{{ site_slogan }}</div>
+				</wrapper>
+			{% endif %}
+
 		</wrapper>
-
-		{% if site_slogan %}
-			<wrapper>
-				<div class="site-slogan">{{ site_slogan }}</div>
-			</wrapper>
-		{% endif %}
-
 	</wrapper>
 {% endblock %}
