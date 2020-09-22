@@ -53,6 +53,7 @@
     </header>
     <wrapper class="colorBarWrapper"><div class="colorBar2"></div></wrapper>
 
+
     <div class="navbar">
         <div id="primary-menu" class="hidden">
             <a href="javascript:void(0);" id="menuToggle-btn" onclick="menuToggle()">☰</a>
@@ -93,12 +94,18 @@
 
     {% if page.footer %}
         <footer role="contentinfo">
+            <div class="bar"></div>
             {#
             <div id="secondary-menu">
                 {{ page.secondary_menu }}
             </div>
             #}
+            
             {{ page.footer }}
+
+            <div class="copyright">
+                {{ 'now' | date('Y') }} &copy; Jeremy Lanssiers
+            </div>
         </footer>
     {% endif %}
 

@@ -19,22 +19,25 @@
 {% block content %}
 	<wrapper class="logoWrapper">
 		<wrapper class="logoCenterWrapper">
-			<wrapper class="logoImgWrapper">
-				<div id="logo"></div>
-			</wrapper>
+			<a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
 
-			{% if site_name %}
-				<wrapper class="logoTxtWrapper">
-					<div class="site-title"><a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a></div>
+				<wrapper class="logoImgWrapper">
+					<div id="logo"></div>
 				</wrapper>
-			{% endif %}
 
-			{% if site_slogan %}
-				<wrapper>
-					<div class="site-slogan">{{ site_slogan }}</div>
-				</wrapper>
-			{% endif %}
+				{% if site_name %}
+					<wrapper class="logoTxtWrapper">
+						<div class="site-title">{{ site_name }}</div>
+					</wrapper>
+				{% endif %}
 
+				{% if site_slogan %}
+					<wrapper>
+						<div class="site-slogan">{{ site_slogan }}</div>
+					</wrapper>
+				{% endif %}
+
+			</a>
 		</wrapper>
 	</wrapper>
 {% endblock %}
